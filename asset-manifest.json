@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/paper-trading-app-react/static/css/main.ea1455b2.chunk.css",
-    "main.js": "/paper-trading-app-react/static/js/main.6434fd02.chunk.js",
-    "main.js.map": "/paper-trading-app-react/static/js/main.6434fd02.chunk.js.map",
+    "main.js": "/paper-trading-app-react/static/js/main.cb71ae35.chunk.js",
+    "main.js.map": "/paper-trading-app-react/static/js/main.cb71ae35.chunk.js.map",
     "runtime-main.js": "/paper-trading-app-react/static/js/runtime-main.bd66fad8.js",
     "runtime-main.js.map": "/paper-trading-app-react/static/js/runtime-main.bd66fad8.js.map",
-    "static/js/2.fe157861.chunk.js": "/paper-trading-app-react/static/js/2.fe157861.chunk.js",
-    "static/js/2.fe157861.chunk.js.map": "/paper-trading-app-react/static/js/2.fe157861.chunk.js.map",
+    "static/js/2.2cbbab7a.chunk.js": "/paper-trading-app-react/static/js/2.2cbbab7a.chunk.js",
+    "static/js/2.2cbbab7a.chunk.js.map": "/paper-trading-app-react/static/js/2.2cbbab7a.chunk.js.map",
     "index.html": "/paper-trading-app-react/index.html",
     "static/css/main.ea1455b2.chunk.css.map": "/paper-trading-app-react/static/css/main.ea1455b2.chunk.css.map",
-    "static/js/2.fe157861.chunk.js.LICENSE.txt": "/paper-trading-app-react/static/js/2.fe157861.chunk.js.LICENSE.txt"
+    "static/js/2.2cbbab7a.chunk.js.LICENSE.txt": "/paper-trading-app-react/static/js/2.2cbbab7a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.bd66fad8.js",
-    "static/js/2.fe157861.chunk.js",
+    "static/js/2.2cbbab7a.chunk.js",
     "static/css/main.ea1455b2.chunk.css",
-    "static/js/main.6434fd02.chunk.js"
+    "static/js/main.cb71ae35.chunk.js"
   ]
 }
