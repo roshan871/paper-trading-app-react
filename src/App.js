@@ -1,5 +1,6 @@
 import "./App.css";
 import React, { Component } from "react";
+import Form from "./Form";
 
 const API_URL = "https://5dfmr.sse.codesandbox.io/cryptos";
 
@@ -35,6 +36,7 @@ export class App extends Component {
                 <p>Balance : $10000</p>
                 <h2>Cryptos</h2>
                 <ul>{this.renderCryptoPrices()}</ul>
+                <Form />
             </div>
         )
     }
