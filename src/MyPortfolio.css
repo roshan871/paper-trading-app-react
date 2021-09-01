@@ -1,0 +1,22 @@
+.table_portfolio {
+  margin-top: 40px;
+  overflow: scroll;
+  color: #6a5d5d;
+  background-color: white;
+  min-height: 100px;
+}
+
+.table_portfolio tr {
+  display: flex;
+  justify-content: space-between;
+}
+
+.table_portfolio td {
+  padding: 0.5rem;
+  border: none;
+  text-transform: capitalize;
+}
+
+.table_portfolio tr:nth-of-type(odd) {
+  background-color: #f3f2f8;
+}
