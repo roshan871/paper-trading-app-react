@@ -15,20 +15,20 @@ export default class MyPortfolio extends Component {
     }
     render() {
         return (
-            <div>
-            <h1>Porfolio</h1>
-                <table className="table_portfolio">
-                    {this.state.portfolio.map(({ CoinBalance, name}) => (
-                    <thead>
-                        <tr key={name}>
-                            <td> {name}</td>
-                            <td>{CoinBalance}</td> 
-                        </tr>
-                    </thead>
-                    ))}
-                </table>
-            
-                
+            <div className="porfolio">
+                <h1>Portfolio</h1>
+                <div className="table__head">
+                <h4>Name</h4>
+                <h4>Quantity</h4>
+                </div>
+                    <div className="table">
+                        {this.state.portfolio.map(({ CoinBalance, name}) => (
+                            <tr key={name}>
+                                <td> {name}</td>
+                                <td>{CoinBalance}</td> 
+                            </tr>
+                        ))}
+                    </div>
             </div>
         )
     }

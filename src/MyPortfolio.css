@@ -1,22 +1,55 @@
-.table_portfolio {
-  margin-top: 40px;
+.portolio {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+h1,
+h4 {
+  margin: 1rem auto;
+  color: #6a5d5d;
+}
+.table__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-bottom: 3rem;
+  margin-left: 0.5rem;
+}
+.table {
   overflow: scroll;
   color: #6a5d5d;
   background-color: white;
-  min-height: 100px;
+  height: 130px;
+  width: 100%;
 }
 
-.table_portfolio tr {
+.table tr {
   display: flex;
   justify-content: space-between;
 }
 
-.table_portfolio td {
+.table td {
+  display: flex;
   padding: 0.5rem;
   border: none;
   text-transform: capitalize;
 }
 
-.table_portfolio tr:nth-of-type(odd) {
+@media (max-width: 760px) {
+}
+
+.table tr:nth-of-type(odd) {
   background-color: #f3f2f8;
+}
+@media (max-width: 760px) {
+  .porfolio {
+    margin-bottom: 1rem;
+  }
+  h1,
+  h4 {
+    margin: 1rem auto;
+  }
 }

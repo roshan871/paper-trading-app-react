@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(234, 237, 237);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.app__container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  flex: 1;
+  margin: 1rem;
+}
+
+.app__heading {
+  color: #6a5d5d;
+}
+h1,
+h2 {
+  color: #6a5d5d;
+}
+
+.app__left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: white;
+  border-radius: 10px solid white;
+  flex: 0.69;
+  height: 48rem;
+}
+
+.app__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 1rem;
+  background-color: white;
+  flex: 0.3;
+}
+
+.app__table {
+  overflow: scroll;
+  color: #6a5d5d;
+  background-color: white;
+  height: 300px;
+  width: 60%;
+  margin-top: -4rem;
+}
+.table__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+tbody > tr {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.app__table td {
+  padding: 0.5rem;
+  border: none;
+  text-transform: capitalize;
+}
+
+.app__table tr:nth-of-type(odd) {
+  background-color: #f3f2f8;
+}
+
+@media (max-width: 760px) {
+  .app__container {
+    flex-direction: column;
+    width: 80%;
+    margin-bottom: 2rem;
+  }
+  h2 {
+    margin: 1rem auto;
+    font-size: 20px;
+  }
+
+  .app__right {
+    padding-top: 1rem;
+  }
+}

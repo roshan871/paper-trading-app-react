@@ -1,0 +1,14 @@
+li {
+  list-style: none;
+  margin-top: -3rem;
+  margin-left: 1rem;
+  border: 0.5px solid grey;
+  padding: 1rem;
+  cursor: pointer;
+  color: #6a5d5d;
+}
+@media (max-width: 760px) {
+  li {
+    margin: 0.7rem auto;
+  }
+}
