@@ -98,4 +98,7 @@ body {
     width: 90%;
     margin-top: 0rem;
   }
+  .app__table tr {
+    width: 90%;
+  }
 }
