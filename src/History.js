@@ -30,7 +30,7 @@ render() {
     return (
         <div className="history">
             <h1>History</h1>
-            <div className="table__head">
+            <div className="history__table__head">
                 <h4>Name</h4>
                 <h4>Unit price</h4>
                 <h4>Date</h4>

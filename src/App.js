@@ -48,11 +48,11 @@ export class App extends Component {
             <div className="app">
                 <div className="app__container">
                     <div className="app__left">
-                        <h1 className="app__heading">Paper trading app</h1>
+                        <h1 className="app__heading">Paper Trading App</h1>
                         <Avatar />
                         <RemainingBalance />
                         <h2>Cryptocurrencies </h2>
-                        <div className="table__head">
+                        <div className="app__table__head">
                             <h4>Name</h4>
                             <h4>Unit price</h4>
                         </div>

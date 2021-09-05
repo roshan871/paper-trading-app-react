@@ -3,29 +3,34 @@
   flex-direction: column;
   width: 100%;
   align-items: center;
-  margin-top: -3rem;
+  margin-top: -5rem;
 }
 .history > h1 {
   margin-top: 5rem;
-}
-.history__table {
-  border: 0.1px solid white;
-  margin-top: -6rem;
-  margin-left: 1rem;
-  overflow: scroll;
   color: #6a5d5d;
-  background-color: white;
-  height: 360px;
-  width: 95%;
 }
 
-.table__head {
-  margin-bottom: 2rem;
+.history__table__head {
+  margin-bottom: 7rem;
+  margin-top: 1rem;
   margin-left: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
+  color: #6a5d5d;
+}
+
+.history__table {
+  border: 0.1px solid white;
+  margin-top: -6rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  overflow: scroll;
+  color: #6a5d5d;
+  background-color: white;
+  height: 360px;
+  width: 95%;
 }
 
 .history__table tr {
@@ -50,6 +55,6 @@
     font-size: 28px;
   }
   .history {
-    margin: 2rem auto;
+    margin-top: -7rem;
   }
 }

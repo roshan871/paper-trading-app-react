@@ -1,24 +1,24 @@
-.portolio {
+.portfolio {
   display: flex;
   flex-direction: column;
   width: 100%;
   align-items: center;
   margin-bottom: 3rem;
 }
-h1,
-h4 {
+.portfolio__heading__one,
+.portfolio__heading__four {
   margin: 1rem auto;
   color: #6a5d5d;
 }
-.table__head {
+.portfolio__table__head {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  color: #6a5d5d;
   width: 100%;
-  margin-bottom: 3rem;
-  margin-left: 0.5rem;
+  margin-bottom: 1rem;
 }
-.table {
+.portfolio__table {
   overflow: scroll;
   color: #6a5d5d;
   background-color: white;
@@ -26,24 +26,22 @@ h4 {
   width: 100%;
 }
 
-.table tr {
+.portfolio__table tr {
   display: flex;
   justify-content: space-between;
+  margin: auto 1rem;
 }
 
-.table td {
+.portfolio__table td {
   display: flex;
   padding: 0.5rem;
   border: none;
   text-transform: capitalize;
 }
-
-@media (max-width: 760px) {
-}
-
-.table tr:nth-of-type(odd) {
+.portfolio__table tr:nth-of-type(odd) {
   background-color: #f3f2f8;
 }
+
 @media (max-width: 760px) {
   .porfolio {
     margin-bottom: 1rem;

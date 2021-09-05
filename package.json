@@ -3,6 +3,7 @@
   "name": "paper-trading-app",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://i3g96.sse.codesandbox.io/",
   "dependencies": {
     "@material-ui/core": "^4.12.3",
     "@testing-library/jest-dom": "^5.14.1",

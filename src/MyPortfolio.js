@@ -15,13 +15,13 @@ export default class MyPortfolio extends Component {
     }
     render() {
         return (
-            <div className="porfolio">
-                <h1>Portfolio</h1>
-                <div className="table__head">
+            <div className="portfolio">
+                <h1 className="portfolio__heading__one">Portfolio</h1>
+                <div className="portfolio__table__head">
                 <h4>Name</h4>
                 <h4>Quantity</h4>
                 </div>
-                    <div className="table">
+                    <div className="portfolio__table">
                         {this.state.portfolio.map(({ CoinBalance, name}) => (
                             <tr key={name}>
                                 <td> {name}</td>

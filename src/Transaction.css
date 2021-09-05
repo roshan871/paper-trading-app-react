@@ -1,7 +1,8 @@
 form {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 label {
   display: flex;
@@ -16,38 +17,44 @@ select {
   color: #6a5d5d;
   text-transform: uppercase;
 }
-.trade__button {
-  margin-top: 0.2rem;
+
+.transaction__button {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: space-evenly;
-  width: 65%;
+  align-items: center;
+}
+
+.trade__button {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 0.2rem;
+  width: 405%;
   font-size: 20px;
   color: #6a5d5d;
   border: none;
-  padding: 5px 50px;
+  padding: 0.5rem 6rem;
   border-radius: 45px solid rgb(29, 27, 27);
   cursor: pointer;
 }
 
 .buy {
-  background-color: rgb(91, 145, 91);
+  background-color: #1f81a8;
 }
 .buy:hover {
   background-color: rgba(91, 145, 91, 0.9);
 }
 .sell {
   background-color: tomato;
+  margin-left: 1rem;
 }
 .sell:hover {
-  background-color: rgba(254, 117, 87, 0.9);
+  background-color: rgb(254, 117, 87, 0.9);
 }
 @media (max-width: 760px) {
   .transaction__input {
     margin: 1rem auto;
   }
   .trade__button {
-    margin: 1rem auto;
+    padding: 0.5rem 2rem;
   }
 }
