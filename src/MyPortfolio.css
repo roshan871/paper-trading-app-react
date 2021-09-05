@@ -44,6 +44,7 @@
 
 @media (max-width: 760px) {
   .porfolio {
+    margin-top: 2rem;
     margin-bottom: 1rem;
   }
   h1,

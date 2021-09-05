@@ -25,7 +25,7 @@ export class App extends Component {
             .then((x) => x.json())
             .then((coins) => {
               this.setState({ coins: coins});
-            //   console.log("coins >>>",coins);
+              console.log("coins >>>",coins);
             });
          }
         

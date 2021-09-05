@@ -32,7 +32,7 @@ export class Transaction extends Component {
             <div className="transaction__form">
                 <form action="https://i3g96.sse.codesandbox.io/coins/new" method="POST">
                     <table className="transaction__input">
-                    <tbody>
+                    
                         <label>
                             Coin:
                             <select name="coin">{this.renderOptions()}</select>
@@ -41,7 +41,7 @@ export class Transaction extends Component {
                             Quantity:
                           <input type="number" name = "quantity"  placeholder = "Quantity" required="required" />
                         </label>
-                        </tbody>
+                        
                     </table>
                     <div className="transaction__button">
                         <button type="submit" className="trade__button buy" onClick={this.props.handleSubmit}>Buy</button>

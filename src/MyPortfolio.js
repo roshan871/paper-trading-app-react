@@ -21,14 +21,16 @@ export default class MyPortfolio extends Component {
                 <h4>Name</h4>
                 <h4>Quantity</h4>
                 </div>
-                    <div className="portfolio__table">
+                    <table className="portfolio__table">
                         {this.state.portfolio.map(({ CoinBalance, name}) => (
-                            <tr key={name}>
-                                <td> {name}</td>
-                                <td>{CoinBalance}</td> 
-                            </tr>
+                            <tbody>
+                                <tr key={name}>
+                                    <td> {name}</td>
+                                    <td>{CoinBalance}</td> 
+                                </tr>
+                            </tbody> 
                         ))}
-                    </div>
+                    </table>
             </div>
         )
     }
