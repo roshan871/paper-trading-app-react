@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './RemainingBalance.css';
 
-export default class Investing extends Component {
+export default class RemainingBalance extends Component {
     state = {
         balance : {}
     };
@@ -18,7 +18,7 @@ export default class Investing extends Component {
     renderBalance(){
 		return Object.values(this.state.balance).map((myBalance) => {
 			return (
-				<li key={myBalance.value}>
+				<li key={myBalance.name.toString()}>
 					<h5>Welcome !{myBalance.name}</h5>
 					<h5>Remaining balance:  ${myBalance.amount.toFixed()}</h5>
 				</li>

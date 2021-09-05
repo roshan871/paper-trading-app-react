@@ -37,14 +37,12 @@ render() {
             </div>
                 <div className="history__table">
                     {this.state.history.map(({ id, name, quantity, unit_price, date }) => (
-                        
-                            <tr key={id.date} >
+                            <tr key={date} >
                                 <td> {name.replace("-", " ")}<br/>{quantity} { quantity === 1 | quantity < 1 ? "token" : "tokens"}</td>
                                 <td>${Math.round(unit_price).toFixed(2)}</td>
                                 <td>{new Date(date).toLocaleDateString()}</td>
                             </tr>
-                        
-                    ))}
+                         ))}
                 </div>
         </div>
     )

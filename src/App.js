@@ -25,13 +25,13 @@ export class App extends Component {
             .then((x) => x.json())
             .then((coins) => {
               this.setState({ coins: coins});
-              console.log("coins >>>",coins);
+            //   console.log("coins >>>",coins);
             });
          }
         
         renderOptions(){
             return Object.keys(this.state.coins).map((key) => (
-                <option value={key}>{key}</option>
+                <option value={key.toString()}>{key}</option>
             ));
         }
         refreshPage = () => {
@@ -39,7 +39,7 @@ export class App extends Component {
             .then((res) => res.json())
             .then(( coins ) => {
                 this.setState({ coins : coins})
-                console.log("COINS", coins)
+                // console.log("COINS", coins)
             });
         }
         
@@ -58,7 +58,7 @@ export class App extends Component {
                         </div>
                         <table className="app__table">{
                             Object.entries(this.state.coins).map((cryptoData) =>(
-                                <tbody>
+                                <tbody key={cryptoData.toString()}>
                                         <tr>
                                             <td>{cryptoData[0].replace(/-/," ")}</td>
                                             <td>${cryptoData[1].toFixed(2)}</td>
