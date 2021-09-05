@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import './Transaction.css';
 
+
+
 export class Transaction extends Component {
+    
     handleSubmit = (e) => {
         e.preventDefault();
             const name = document.querySelector("name=[name]".value);
@@ -11,13 +14,28 @@ export class Transaction extends Component {
                 method : "POST",
                 headers : {
                     Accept : "application/json",
-                    mode : 'no-cors',
-                    "constentType" : "application/json"
+                    mode: "no-cors",
+                    "constentType" : "application/json",
+                    
                 },
                 body: JSON.stringify({name:name, quantity:quantity})
             }).then(this.props.refreshPage);
-        
+            
     }
+    handleKeypress (e) {
+        const characterCode = e.key
+        if (characterCode === 'Backspace') return
+        const characterNumber = Number(characterCode)
+        if (characterNumber !==0 ) {
+          if (e.currentTarget.value && e.currentTarget.value.length) {
+            return
+          } else if (characterNumber === 0) {
+            e.preventDefault()
+          }
+        } else {
+          e.preventDefault()
+        }
+      }
         
     renderOptions(){
         // console.log("Yooo00000",this.props.coins);
@@ -27,6 +45,7 @@ export class Transaction extends Component {
         ))
         
     }
+     
     render() {
         return (
             <div className="transaction__form">
@@ -39,13 +58,14 @@ export class Transaction extends Component {
                         </label>
                         <label>
                             Quantity:
-                          <input type="number" name = "quantity"  placeholder = "Quantity" required="required" />
+                          <input type="number" name = "quantity"  placeholder = "Quantity" required="required" onKeyDown={this.handleKeypress} />
                         </label>
                         
                     </table>
                     <div className="transaction__button">
                         <button type="submit" className="trade__button buy" onClick={this.props.handleSubmit}>Buy</button>
-                        <button type="submit" className="trade__button sell">Sell</button>
+                        <button type="submit" className="trade__button sell"  onClick={this.props.handleSubmit}>Sell</button>
+                        {/* {this.state.showName} */}
                     </div>
                 </form>
             </div>
