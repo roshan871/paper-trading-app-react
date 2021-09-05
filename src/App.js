@@ -60,7 +60,7 @@ export class App extends Component {
                             Object.entries(this.state.coins).map((cryptoData) =>(
                                 <tbody>
                                         <tr>
-                                            <td>{cryptoData[0]}</td>
+                                            <td>{cryptoData[0].replace(/-/," ")}</td>
                                             <td>${cryptoData[1].toFixed(2)}</td>
                                         </tr>
                                 </tbody>

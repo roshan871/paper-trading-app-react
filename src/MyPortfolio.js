@@ -25,7 +25,7 @@ export default class MyPortfolio extends Component {
                         {this.state.portfolio.map(({ CoinBalance, name}) => (
                             <tbody>
                                 <tr key={name}>
-                                    <td> {name}</td>
+                                    <td> {name.replace("-", " ")}</td>
                                     <td>{CoinBalance}</td> 
                                 </tr>
                             </tbody> 
