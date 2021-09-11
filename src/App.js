@@ -17,7 +17,7 @@ export class App extends Component {
     
     state = {
         coins : {},
-        cryptos : {}
+        // cryptos : {}
 
     };
    
@@ -33,15 +33,15 @@ export class App extends Component {
         
         renderOptions(){
             return Object.keys(this.state.coins).map((key) => (
-                <option value={key.toString()}>{key}</option>
+                <option key={key} value={key}>{key}</option>
             ));
         }
         refreshPage = () => {
-            fetch("https://i3g96.sse.codesandbox.io/coins")
+            fetch("https://i3g96.sse.codesandbox.io/cryptos")
             .then((res) => res.json())
-            .then(( cryptos ) => {
-                this.setState({ cryptos : cryptos})
-                // console.log("COINS", cryptos)
+            .then(( coins) => {
+                this.setState({ coins : coins})
+                console.log("Refresh page", coins)
             });
         }
         

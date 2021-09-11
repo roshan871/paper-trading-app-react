@@ -5,7 +5,7 @@ import './Transaction.css';
 
 export class Transaction extends Component {
     
-    handleSubmit = (e) => {
+    handleSubmit = (e, transactionType = 'buy') => {
         e.preventDefault();
         const name = document.querySelector("[name=coin]").value;
         const quantity = Number.parseInt(document.querySelector("[name=quantity]").value);
@@ -23,7 +23,7 @@ export class Transaction extends Component {
                 
             },
             body: JSON.stringify({name:name, quantity:quantity})
-        }).then(this.props.refreshPage);
+        }).then(data => data.json()).then(this.props.refreshPage);
             
     }
     handleKeypress (e) {
@@ -72,8 +72,8 @@ export class Transaction extends Component {
                         
                     </table>
                     <div className="transaction__button">
-                        <button type="submit" className="trade__button buy" onClick={this.props.handleSubmit}>Buy</button>
-                        <button type="submit" className="trade__button sell"  onClick={this.props.handleSubmit}>Sell</button>
+                        <button type="submit" className="trade__button buy" onClick={this.handleSubmit}>Buy</button>
+                        <button type="submit" className="trade__button sell"  onClick={this.handleSubmit}>Sell</button>
                         {/* {this.state.showName} */}
                     </div>
                 </form>

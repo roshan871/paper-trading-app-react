@@ -39,7 +39,7 @@ body {
 .app__right {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   background-color: white;
   flex: 0.3;
