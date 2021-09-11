@@ -7,19 +7,23 @@ export class Transaction extends Component {
     
     handleSubmit = (e) => {
         e.preventDefault();
-            const name = document.querySelector("name=[name]".value);
-            const quantity = document.querySelector("name=quantity").value;
+        const name = document.querySelector("[name=coin]").value;
+        const quantity = Number.parseInt(document.querySelector("[name=quantity]").value);
+        // if (Number.isNaN(quantity)) {
+        //     quantity = 0;
+        // }
+        alert(`${name} ${quantity}`);
 
-            fetch("https://i3g96.sse.codesandbox.io/coins/new", {
-                method : "POST",
-                headers : {
-                    Accept : "application/json",
-                    mode: "no-cors",
-                    "constentType" : "application/json",
-                    
-                },
-                body: JSON.stringify({name:name, quantity:quantity})
-            }).then(this.props.refreshPage);
+        fetch("https://i3g96.sse.codesandbox.io/coins/new", {
+            method : "POST",
+            mode: "cors",
+            headers : {
+                Accept : "application/json",
+                "Content-Type" : "application/json",
+                
+            },
+            body: JSON.stringify({name:name, quantity:quantity})
+        }).then(this.props.refreshPage);
             
     }
     handleKeypress (e) {
@@ -49,7 +53,12 @@ export class Transaction extends Component {
     render() {
         return (
             <div className="transaction__form">
-                <form action="https://i3g96.sse.codesandbox.io/coins/new" method="POST">
+                <form 
+                    action="https://i3g96.sse.codesandbox.io/coins/new" 
+                    method="POST"
+                    onSubmit={event=>this.handleSubmit(event)}
+                >
+
                     <table className="transaction__input">
                     
                         <label>

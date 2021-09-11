@@ -14,6 +14,18 @@ export default class MyPortfolio extends Component {
         })
     }
     render() {
+        let portfolioItems =  this.state.portfolio.map(({ CoinBalance, name}) => (
+            <tr key={name} id="myList">
+                <td> {name.replace("-", " ")}</td>
+                <td>{CoinBalance}</td> 
+            </tr>
+            ))
+        var newItem = document.createElement("div");
+        var textnode = document.createTextNode(portfolioItems);
+        newItem.appendChild(textnode);
+        // var list = document.getElementsByClassName("portfolio__table");
+        // list.insertBefore(newItem, list.myList[0]);
+
         return (
             <div className="portfolio">
                 <h1 className="portfolio__heading__one">Portfolio</h1>
@@ -22,12 +34,7 @@ export default class MyPortfolio extends Component {
                 <h4>Quantity</h4>
                 </div>
                     <div className="portfolio__table">
-                        {this.state.portfolio.map(({ CoinBalance, name}) => (
-                                <tr key={name}>
-                                    <td> {name.replace("-", " ")}</td>
-                                    <td>{CoinBalance}</td> 
-                                </tr>
-                                ))}
+                        {portfolioItems}
                     </div>
             </div>
         )

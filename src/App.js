@@ -16,7 +16,9 @@ const API_URL = "https://i3g96.sse.codesandbox.io/cryptos";
 export class App extends Component {
     
     state = {
-        coins : []
+        coins : {},
+        cryptos : {}
+
     };
    
 
@@ -37,13 +39,31 @@ export class App extends Component {
         refreshPage = () => {
             fetch("https://i3g96.sse.codesandbox.io/coins")
             .then((res) => res.json())
-            .then(( coins ) => {
-                this.setState({ coins : coins})
-                // console.log("COINS", coins)
+            .then(( cryptos ) => {
+                this.setState({ cryptos : cryptos})
+                // console.log("COINS", cryptos)
             });
         }
         
     render() {
+        const coinValues = Object.entries(this.state.coins).map((cryptoData) =>{ 
+            let price;
+            if (typeof cryptoData[1] === 'number') {
+                price = cryptoData[1].toFixed(2);
+            } else {
+                // This prints garbage because of bad refreshPage setState. Fix it.
+                price = cryptoData[1].unit_price.toFixed(2);
+            }
+            console.log(cryptoData, price);
+            return (
+                <tbody key={cryptoData.toString()}>
+                    <tr>
+                        <td>{cryptoData[0].replace(/-/," ")}</td>
+                        <td>${price}</td>
+                    </tr>
+                </tbody>
+            )
+        });
         return(
             <div className="app">
                 <div className="app__container">
@@ -56,16 +76,7 @@ export class App extends Component {
                             <h4>Name</h4>
                             <h4>Unit price</h4>
                         </div>
-                        <table className="app__table">{
-                            Object.entries(this.state.coins).map((cryptoData) =>(
-                                <tbody key={cryptoData.toString()}>
-                                        <tr>
-                                            <td>{cryptoData[0].replace(/-/," ")}</td>
-                                            <td>${cryptoData[1].toFixed(2)}</td>
-                                        </tr>
-                                </tbody>
-                                ))}
-                        </table>
+                        <table className="app__table">{coinValues}</table>
                         <Transaction refreshPage={this.refreshPage} coins={this.state.coins} />
                     </div>
                     <div className="app__right">
