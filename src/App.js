@@ -5,7 +5,7 @@ import RemainingBalance from "./RemainingBalance";
 import History from "./History";
 import MyPortfolio from "./MyPortfolio";
 import Avatar from "./Avatar"
-import { HashRouter as Router, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 
 const API_URL = "https://i3g96.sse.codesandbox.io/cryptos";
@@ -76,7 +76,7 @@ export class App extends Component {
                         <RemainingBalance />
                         <h2>Cryptocurrencies </h2>
                         <Router>
-                            <Link target={"_blank"} to={{  pathname: "https://codesandbox.io/s/zen-hamilton-i3g96?file=/src/index.js" }}><button className="server__button">Launch Server</button></Link>
+                            <Link target={"_blank"} to={{  pathname:"https://codesandbox.io/s/zen-hamilton-i3g96?file=/src/index.js" }}><button className="server__button">Launch Server</button></Link>
                         </Router>                        
                         <div className="app__table__head">
                             <h4>Name</h4>

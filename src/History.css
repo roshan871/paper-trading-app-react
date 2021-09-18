@@ -11,26 +11,25 @@
 }
 
 .history__table__head {
-  margin-bottom: 7rem;
-  margin-top: 1rem;
-  margin-left: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 100%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   color: #6a5d5d;
 }
 
 .history__table {
-  border: 0.1px solid white;
-  margin-top: -6rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  overflow: scroll;
   color: #6a5d5d;
   background-color: white;
+  width: 100%;
+}
+
+.table-container {
+  overflow: scroll;
   height: 270px;
   width: 95%;
+  border: 0.1px solid white;
+  margin-top: 3rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .history__table tr {

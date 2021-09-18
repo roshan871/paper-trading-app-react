@@ -39,17 +39,22 @@ select {
 }
 
 .buy {
-  background-color: #1f81a8;
+  background-color: teal;
 }
-.buy:hover {
-  background-color: rgba(91, 145, 91, 0.9);
+.buy:hover,
+.buy:active {
+  background-color: teal;
+  box-shadow: 4px 4px 4px rgba(0, 128, 128, 0.5);
 }
 .sell {
   background-color: tomato;
   margin-left: 1rem;
 }
-.sell:hover {
-  background-color: rgb(254, 117, 87, 0.9);
+.sell:hover,
+.sell:active {
+  background-color: tomato;
+
+  box-shadow: 4px 4px 4px rgb(225, 99, 71, 0.5);
 }
 @media (max-width: 760px) {
   .transaction__input {

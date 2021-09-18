@@ -36,9 +36,10 @@ body {
   border-radius: 15px;
 }
 
-.server__button:hover {
+.server__button:hover,
+.server__button:active {
   background-color: teal;
-  box-shadow: 4px 4px 4px rgba(255, 99, 71, 0.6);
+  box-shadow: 4px 4px 4px rgba(0, 128, 128, 0.5);
 }
 
 .app__left {

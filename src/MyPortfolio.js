@@ -20,9 +20,9 @@ export default class MyPortfolio extends Component {
                 <td>{CoinBalance}</td> 
             </tr>
             ))
-        var newItem = document.createElement("div");
+        /*var newItem = document.createElement("div");
         var textnode = document.createTextNode(portfolioItems);
-        newItem.appendChild(textnode);
+        newItem.appendChild(textnode);*/
         // var list = document.getElementsByClassName("portfolio__table");
         // list.insertBefore(newItem, list.myList[0]);
 
@@ -33,9 +33,9 @@ export default class MyPortfolio extends Component {
                 <h4>Name</h4>
                 <h4>Quantity</h4>
                 </div>
-                    <div className="portfolio__table">
+                    <table className="portfolio__table">
                         {portfolioItems}
-                    </div>
+                    </table>
             </div>
         )
     }

@@ -23,7 +23,10 @@ export class Transaction extends Component {
                 
             },
             body: JSON.stringify({name:name, quantity:quantity})
-        }).then(data => data.json()).then(this.props.refreshPage);
+        }).then(data => data.json()).then((response) => {
+            alert(response.status);
+            this.props.refreshPage();
+        });
             
     }
     handleKeypress (e) {
