@@ -15,7 +15,15 @@ export class App extends Component {
     state = {
         coins : {},
         history: [],
+        portfolio : [],
     };
+    loadPortfolio = () => {
+        fetch("https://i3g96.sse.codesandbox.io/portfolio")
+            .then((x) => x.json())
+            .then((portfolio) => {
+                this.setState({portfolio : portfolio})
+            });
+    }
 
     loadHistory = () => {
         fetch("https://i3g96.sse.codesandbox.io/history")
@@ -30,22 +38,23 @@ export class App extends Component {
             .then((x) => x.json())
             .then((coins) => {
               this.setState({ coins: coins});
-            //   console.log("coins >>>",coins);
             });
          }
-        
+
         renderOptions(){
             return Object.keys(this.state.coins).map((key) => (
                 <option key={key} value={key}>{key}</option>
             ));
         }
+
         refreshPage = () => {
+            this.loadPortfolio();
             this.loadHistory();
             fetch("https://i3g96.sse.codesandbox.io/cryptos")
             .then((res) => res.json())
             .then(( coins) => {
                 this.setState({ coins : coins})
-                console.log("Refresh page", coins)
+                // console.log("Refresh page", coins)
             });            
         }
         
@@ -67,6 +76,7 @@ export class App extends Component {
                 </tbody>
             )
         });
+
         return(
             <div className="app">
                 <div className="app__container">
@@ -86,7 +96,7 @@ export class App extends Component {
                         <Transaction refreshPage={this.refreshPage} coins={this.state.coins} />
                     </div>
                     <div className="app__right">
-                        <MyPortfolio />  
+                        <MyPortfolio portfolio={this.state.portfolio} loadPortfolio={this.loadPortfolio} />  
                         <History history={this.state.history} loadHistory={this.loadHistory} />
                     </div>
                 </div>

@@ -9,9 +9,6 @@ export class Transaction extends Component {
         e.preventDefault();
         const name = document.querySelector("[name=coin]").value;
         const quantity = Number.parseInt(document.querySelector("[name=quantity]").value);
-        // if (Number.isNaN(quantity)) {
-        //     quantity = 0;
-        // }
         alert(`${name} ${quantity}`);
 
         fetch("https://i3g96.sse.codesandbox.io/coins/new", {
@@ -45,7 +42,6 @@ export class Transaction extends Component {
       }
         
     renderOptions(){
-        // console.log("Yooo00000",this.props.coins);
         return Object.keys(this.props.coins).map((key) => (
             <option key={key}>{key}</option>
             
@@ -61,9 +57,7 @@ export class Transaction extends Component {
                     method="POST"
                     onSubmit={event=>this.handleSubmit(event)}
                 >
-
                     <table className="transaction__input">
-                    
                         <label>
                             Coin:
                             <select name="coin">{this.renderOptions()}</select>
@@ -72,12 +66,10 @@ export class Transaction extends Component {
                             Quantity:
                           <input type="number" name = "quantity"  placeholder = "Quantity" required="required" onKeyDown={this.handleKeypress} />
                         </label>
-                        
                     </table>
                     <div className="transaction__button">
                         <button type="submit" className="trade__button buy" onClick={this.handleSubmit}>Buy</button>
                         <button type="submit" className="trade__button sell"  onClick={this.handleSubmit}>Sell</button>
-                        {/* {this.state.showName} */}
                     </div>
                 </form>
             </div>

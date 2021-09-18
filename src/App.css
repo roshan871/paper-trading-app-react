@@ -13,6 +13,7 @@ body {
   align-items: center;
   justify-content: space-evenly;
 }
+
 .app__container {
   display: flex;
   justify-content: space-evenly;
@@ -101,6 +102,7 @@ body {
     width: 94%;
     margin-bottom: 2rem;
   }
+
   h2 {
     margin: 1rem auto;
     font-size: 20px;
@@ -109,10 +111,12 @@ body {
   .app__right {
     padding-top: 1rem;
   }
+
   .app__table {
     width: 90%;
     margin-top: 0rem;
   }
+
   .app__table tr {
     width: 90%;
   }

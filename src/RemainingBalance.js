@@ -10,7 +10,7 @@ export default class RemainingBalance extends Component {
         .then(response => response.json())
         .then(( balance ) => {
             this.setState({ balance :  balance});
-            console.log("REMAING BALANCE",balance);  
+            // console.log("REMAING BALANCE",balance);  
         });
         
     }
