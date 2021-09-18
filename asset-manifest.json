@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/paper-trading-app-react/static/css/main.c2886a34.chunk.css",
-    "main.js": "/paper-trading-app-react/static/js/main.99b25720.chunk.js",
-    "main.js.map": "/paper-trading-app-react/static/js/main.99b25720.chunk.js.map",
+    "main.js": "/paper-trading-app-react/static/js/main.8f94c4a3.chunk.js",
+    "main.js.map": "/paper-trading-app-react/static/js/main.8f94c4a3.chunk.js.map",
     "runtime-main.js": "/paper-trading-app-react/static/js/runtime-main.bd66fad8.js",
     "runtime-main.js.map": "/paper-trading-app-react/static/js/runtime-main.bd66fad8.js.map",
     "static/js/2.b6ce3ebf.chunk.js": "/paper-trading-app-react/static/js/2.b6ce3ebf.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.bd66fad8.js",
     "static/js/2.b6ce3ebf.chunk.js",
     "static/css/main.c2886a34.chunk.css",
-    "static/js/main.99b25720.chunk.js"
+    "static/js/main.8f94c4a3.chunk.js"
   ]
 }
