@@ -4,23 +4,26 @@ import Transaction from "./Transaction";
 import RemainingBalance from "./RemainingBalance";
 import History from "./History";
 import MyPortfolio from "./MyPortfolio";
-// import { makeStyles } from "@material-ui/core/styles";
 import Avatar from "./Avatar"
+import { HashRouter as Router, Link } from 'react-router-dom';
 
 
 const API_URL = "https://i3g96.sse.codesandbox.io/cryptos";
-
-
-
 
 export class App extends Component {
     
     state = {
         coins : {},
-        // cryptos : {}
-
+        history: [],
     };
-   
+
+    loadHistory = () => {
+        fetch("https://i3g96.sse.codesandbox.io/history")
+            .then((x) => x.json())
+            .then((history) => {
+                this.setState({history : history})
+            });
+    }
 
     componentDidMount(){
         fetch(API_URL)
@@ -37,12 +40,13 @@ export class App extends Component {
             ));
         }
         refreshPage = () => {
+            this.loadHistory();
             fetch("https://i3g96.sse.codesandbox.io/cryptos")
             .then((res) => res.json())
             .then(( coins) => {
                 this.setState({ coins : coins})
                 console.log("Refresh page", coins)
-            });
+            });            
         }
         
     render() {
@@ -51,7 +55,6 @@ export class App extends Component {
             if (typeof cryptoData[1] === 'number') {
                 price = cryptoData[1].toFixed(2);
             } else {
-                // This prints garbage because of bad refreshPage setState. Fix it.
                 price = cryptoData[1].unit_price.toFixed(2);
             }
             console.log(cryptoData, price);
@@ -72,6 +75,9 @@ export class App extends Component {
                         <Avatar />
                         <RemainingBalance />
                         <h2>Cryptocurrencies </h2>
+                        <Router>
+                            <Link target={"_blank"} to={{  pathname: "https://codesandbox.io/s/zen-hamilton-i3g96?file=/src/index.js" }}><button className="server__button">Launch Server</button></Link>
+                        </Router>                        
                         <div className="app__table__head">
                             <h4>Name</h4>
                             <h4>Unit price</h4>
@@ -81,7 +87,7 @@ export class App extends Component {
                     </div>
                     <div className="app__right">
                         <MyPortfolio />  
-                        <History />
+                        <History history={this.state.history} loadHistory={this.loadHistory} />
                     </div>
                 </div>
             </div>

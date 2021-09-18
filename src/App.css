@@ -26,6 +26,21 @@ body {
   color: #6a5d5d;
 }
 
+.server__button {
+  padding: 0.7rem 0.5rem;
+  background-color: tomato;
+  cursor: pointer;
+  color: #f3f2f8;
+  font-size: 1rem;
+  border: none;
+  border-radius: 15px;
+}
+
+.server__button:hover {
+  background-color: teal;
+  box-shadow: 4px 4px 4px rgba(255, 99, 71, 0.6);
+}
+
 .app__left {
   display: flex;
   flex-direction: column;
