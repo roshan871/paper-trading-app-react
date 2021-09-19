@@ -4,7 +4,9 @@ li {
   border: 0.5px solid grey;
   padding: 1rem;
   cursor: pointer;
-  color: #6a5d5d;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
 }
 @media (max-width: 760px) {
   li {

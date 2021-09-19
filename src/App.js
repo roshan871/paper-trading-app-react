@@ -6,7 +6,7 @@ import History from "./History";
 import MyPortfolio from "./MyPortfolio";
 import Avatar from "./Avatar"
 import { BrowserRouter as Router, Link } from 'react-router-dom';
-
+// import image from './Images/image.png'
 
 const API_URL = "https://i3g96.sse.codesandbox.io/cryptos";
 
@@ -82,12 +82,14 @@ export class App extends Component {
                 <div className="app__container">
                     <div className="app__left">
                         <h1 className="app__heading">Paper Trading App</h1>
+                        <div className="container">
+                            <RemainingBalance />
+                            <Router>
+                                <Link target={"_blank"} to={{  pathname:"https://codesandbox.io/s/zen-hamilton-i3g96?file=/src/index.js" }}><button className="server__button">Run Server</button></Link>
+                            </Router> 
+                        </div>
                         <Avatar />
-                        <RemainingBalance />
                         <h2>Cryptocurrencies </h2>
-                        <Router>
-                            <Link target={"_blank"} to={{  pathname:"https://codesandbox.io/s/zen-hamilton-i3g96?file=/src/index.js" }}><button className="server__button">Launch Server</button></Link>
-                        </Router>                        
                         <div className="app__table__head">
                             <h4>Name</h4>
                             <h4>Unit price</h4>

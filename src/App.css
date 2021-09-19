@@ -4,7 +4,9 @@
 }
 
 body {
+  margin: 1rem;
   background-color: rgb(234, 237, 237);
+  border-radius: 999px;
 }
 
 .app {
@@ -12,6 +14,19 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  min-width: 400px;
+  min-height: 200px;
+}
+
+.app__left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: white;
+  border-radius: 10px solid white;
+  flex: 0.69;
+  padding-top: 1rem;
 }
 
 .app__container {
@@ -35,6 +50,8 @@ body {
   font-size: 1rem;
   border: none;
   border-radius: 15px;
+  /* margin-bottom: 3rem;
+  margin-right: 5rem; */
 }
 
 .server__button:hover,
@@ -42,15 +59,21 @@ body {
   background-color: teal;
   box-shadow: 4px 4px 4px rgba(0, 128, 128, 0.5);
 }
-
-.app__left {
+.container {
+  margin: 3rem auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
-  background-color: white;
-  border-radius: 10px solid white;
-  flex: 0.69;
+  justify-content: space-betweenj;
+  width: 80%;
+  min-height: 20rem;
+  background-size: cover;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 128, 128, 0.5),
+      rgba(255, 99, 71, 0.5)
+    ),
+    url("./Images/bagroundImage.png");
 }
 
 .app__right {
