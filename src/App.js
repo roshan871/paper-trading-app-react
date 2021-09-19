@@ -81,7 +81,8 @@ export class App extends Component {
             <div className="app">
                 <div className="app__container">
                     <div className="app__left">
-                        <h1 className="app__heading">Paper Trading App</h1>
+                        <h1 className="app__heading">Paper <span className="trading">Trading</span> App</h1>
+                        <p className="note">⚠️ Temporarily the server side code is in codesandbox.So need to run the sever side code first to get fully loaded application</p>
                         <div className="container">
                             <RemainingBalance />
                             <Router>

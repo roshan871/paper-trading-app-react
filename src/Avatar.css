@@ -1,9 +1,3 @@
-.classes.root {
-  margin-top: -9rem !important;
-}
-.avatar {
-  width: 100%;
-}
 .MuiAvatar-root.MuiAvatar-root {
   color: transparent;
   width: 16%;
@@ -16,11 +10,8 @@
 
 @media (max-width: 800px) {
   .MuiAvatar-root.MuiAvatar-root {
-    color: transparent;
     width: 15%;
-    object-fit: cover;
-    text-align: center !important;
-    margin-left: 12rem;
+    margin-left: 13rem;
     margin-top: -5rem;
   }
 }
@@ -29,9 +20,6 @@
   .MuiAvatar-root.MuiAvatar-root {
     color: transparent;
     width: 15%;
-    /* height: 15%; */
-    object-fit: cover;
-    text-align: center !important;
     margin-left: 10rem;
     margin-top: -5rem;
   }

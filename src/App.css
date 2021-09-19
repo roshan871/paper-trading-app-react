@@ -18,6 +18,13 @@ body {
   min-height: 200px;
 }
 
+.trading {
+  padding: 0.3rem;
+  color: #f3f2f8;
+  background-color: teal;
+  border-radius: 0.3rem;
+}
+
 .app__left {
   display: flex;
   flex-direction: column;
@@ -27,6 +34,13 @@ body {
   border-radius: 10px solid white;
   flex: 0.69;
   padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.note {
+  margin-top: 0.8rem;
+  margin-left: 2rem;
+  width: 100%;
+  font-size: 0.8rem;
 }
 
 .app__container {
@@ -41,30 +55,12 @@ body {
 .app__heading {
   color: #6a5d5d;
 }
-
-.server__button {
-  padding: 0.7rem 0.5rem;
-  background-color: tomato;
-  cursor: pointer;
-  color: #f3f2f8;
-  font-size: 1rem;
-  border: none;
-  border-radius: 15px;
-  /* margin-bottom: 3rem;
-  margin-right: 5rem; */
-}
-
-.server__button:hover,
-.server__button:active {
-  background-color: teal;
-  box-shadow: 4px 4px 4px rgba(0, 128, 128, 0.5);
-}
 .container {
   margin: 3rem auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-betweenj;
+  justify-content: space-around;
   width: 80%;
   min-height: 20rem;
   background-size: cover;
@@ -76,6 +72,24 @@ body {
     url("./Images/bagroundImage.png");
 }
 
+.server__button {
+  padding: 0.7rem 0.5rem;
+  background-color: tomato;
+  cursor: pointer;
+  color: #f3f2f8;
+  font-size: 1rem;
+  border: none;
+  border-radius: 15px;
+  margin-bottom: 6rem;
+  margin-right: 5rem;
+}
+
+.server__button:hover,
+.server__button:active {
+  background-color: teal;
+  box-shadow: 4px 4px 4px rgba(0, 128, 128, 0.5);
+}
+
 .app__right {
   display: flex;
   flex-direction: column;
@@ -83,6 +97,7 @@ body {
   align-items: center;
   background-color: white;
   flex: 0.3;
+  padding-bottom: 1rem;
 }
 
 .app__table__head {
