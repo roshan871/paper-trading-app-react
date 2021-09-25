@@ -17,18 +17,31 @@
   width: 100%;
   margin: 1.5rem auto;
 }
-.portfolio__table {
+.portfolio__container {
   overflow: scroll;
-  color: #6a5d5d;
-  background-color: white;
   height: 180px;
   width: 100%;
+  padding-top: 2rem;
+}
+.portfolio__table {
+  color: #6a5d5d;
+  background-color: white;
+  width: 85%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.portfolio__table__head {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: #6a5d5d;
 }
 
 .portfolio__table tr {
   display: flex;
   justify-content: space-between;
   margin: auto 1rem;
+  width: 100%;
 }
 
 .portfolio__table td {

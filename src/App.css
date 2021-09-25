@@ -39,7 +39,7 @@ body {
 .note {
   margin-top: 0.8rem;
   margin-left: 2rem;
-  width: 100%;
+  width: 98%;
   font-size: 0.8rem;
 }
 
@@ -116,9 +116,15 @@ body {
   width: 79%;
 }
 
+.app__table__head {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: #6a5d5d;
+}
+
 .app__table tr {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   width: 82%;
   margin: auto 1rem;
 }

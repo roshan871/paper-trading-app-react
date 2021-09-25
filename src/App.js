@@ -6,7 +6,6 @@ import History from "./History";
 import MyPortfolio from "./MyPortfolio";
 import Avatar from "./Avatar"
 import { BrowserRouter as Router, Link } from 'react-router-dom';
-// import image from './Images/image.png'
 
 const API_URL = "https://i3g96.sse.codesandbox.io/cryptos";
 
@@ -68,6 +67,7 @@ export class App extends Component {
             }
             console.log(cryptoData, price);
             return (
+                
                 <tbody key={cryptoData.toString()}>
                     <tr>
                         <td>{cryptoData[0].replace(/-/," ")}</td>
@@ -82,7 +82,7 @@ export class App extends Component {
                 <div className="app__container">
                     <div className="app__left">
                         <h1 className="app__heading">Paper <span className="trading">Trading</span> App</h1>
-                        <p className="note">⚠️ Temporarily the server side code is in codesandbox.So need to run the sever side code first to get fully loaded application</p>
+                        <p className="note">⚠️ Temporarily the server side code is in codesandbox.So we need to run the sever side code first to get fully loaded application</p>
                         <div className="container">
                             <RemainingBalance />
                             <Router>
@@ -91,11 +91,14 @@ export class App extends Component {
                         </div>
                         <Avatar />
                         <h2>Cryptocurrencies </h2>
-                        <div className="app__table__head">
-                            <h4>Name</h4>
-                            <h4>Unit price</h4>
-                        </div>
-                        <table className="app__table">{coinValues}</table>
+                        
+                        <table className="app__table">
+                            <tr className='app__table__head'>
+                                <th>Name</th>
+                                <th>Quantity</th>
+                            </tr>
+                                {coinValues}
+                        </table>
                         <Transaction refreshPage={this.refreshPage} coins={this.state.coins} />
                     </div>
                     <div className="app__right">
