@@ -61,9 +61,9 @@ export class App extends Component {
         const coinValues = Object.entries(this.state.coins).map((cryptoData) =>{ 
             let price;
             if (typeof cryptoData[1] === 'number') {
-                price = cryptoData[1].toFixed(2);
+                price = cryptoData[1];
             } else {
-                price = cryptoData[1].unit_price.toFixed(2);
+                price = cryptoData[1].unit_price;
             }
             console.log(cryptoData, price);
             return (

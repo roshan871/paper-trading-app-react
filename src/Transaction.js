@@ -21,7 +21,7 @@ export class Transaction extends Component {
 
     validate = () => {
         let quantityError = "";
-        if(this.state.quantity === "0"){
+        if(this.state.quantity === "0" && this.state.quantity === "-0"){
             quantityError = "Zero is not a valid quantity to trade"     
         }
         if(quantityError){
