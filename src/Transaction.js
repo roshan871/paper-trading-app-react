@@ -30,15 +30,24 @@ export class Transaction extends Component {
         }
         return true;
     }
+
+    handleSubmit(e) {
+        e.preventDefault();
+    }
     
-    handleSubmit = (e, transactionType = 'buy') => {
+    handleTransaction = (e, transactionType = 'buy') => {
         e.preventDefault();
         const isValid = this.validate();
         if (isValid) {
         //  console.log(this.state);  
 
         const name = document.querySelector("[name=coin]").value;
-        const quantity = Number.parseInt(document.querySelector("[name=quantity]").value);
+        let quantity = Number.parseFloat(document.querySelector("[name=quantity]").value);
+        
+        if (transactionType === 'sell') {
+            quantity *= -1;
+        }
+        
         alert(`${name} ${quantity}`);
 
         fetch("https://i3g96.sse.codesandbox.io/coins/new", {
@@ -50,7 +59,7 @@ export class Transaction extends Component {
                 
             },
             body: JSON.stringify({name:name, quantity:quantity})
-        }).then(data => data.json()).then(this.props.refreshPage())
+        }).then(data => data.json()).then(this.props.refreshPage)
         this.setState(initialState);
 
      }
@@ -59,9 +68,8 @@ export class Transaction extends Component {
     renderOptions(){
         return Object.keys(this.props.coins).map((key) => (
             <option key={key}>{key}</option>
-            
-        ))
-        }
+        ));
+    }
      
     render() {
         return (
@@ -85,8 +93,8 @@ export class Transaction extends Component {
                         </div>
                     </table>
                     <div className="transaction__button">
-                        <button type="submit" className="trade__button buy">Buy</button>
-                        <button type="submit" className="trade__button sell" >Sell</button>
+                        <button type="submit" onClick={event=>this.handleTransaction(event, 'buy')} className="trade__button buy">Buy</button>
+                        <button type="submit" onClick={event=>this.handleTransaction(event, 'sell')} className="trade__button sell" >Sell</button>
                     </div>
                 </form>
             </div>

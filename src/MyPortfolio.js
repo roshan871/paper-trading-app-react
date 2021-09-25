@@ -7,11 +7,13 @@ export default class MyPortfolio extends Component {
         this.props.loadPortfolio();
     }
     render() {
-        let portfolioItems =  this.props.portfolio.map(({ CoinBalance, name}) => (
-            <tr key={name} id="myList">
-                <td> {name.replace("-", " ")}</td>
-                <td>{CoinBalance}</td>
-            </tr>
+        let portfolioItems =  this.props.portfolio
+            .filter(({CoinBalance}) => CoinBalance !== 0)
+            .map(({CoinBalance, name}) => (
+                <tr key={name} id="myList">
+                    <td> {name.replace("-", " ")}</td>
+                    <td>{CoinBalance}</td>
+                </tr>
             ))
         
         return (
